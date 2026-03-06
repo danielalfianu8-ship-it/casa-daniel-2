@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Casă Daniel 2 | Moieciu de Jos</title>
+<meta name="description" content="Casă Daniel 2 - cazare în Moieciu de Jos, Brașov. Camere elegante, piscină interioară, restaurant, foișoare și zonă de relaxare." />
+<style>
+:root {
+  --gold:#d4af37;
+  --gold-soft:#e8cf78;
+  --black:#0c0c0c;
+  --cream:#faf7f0;
+  --white:#ffffff;
+  --text:#222;
+  --muted:#666;
+  --card:#ffffff;
+  --shadow:0 12px 35px rgba(0,0,0,.10);
+  --radius:22px;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:linear-gradient(180deg,#fff,#f7f2e7);
+  color:var(--text);
+}
+a { color:inherit; text-decoration:none; }
+img { max-width:100%; display:block; }
+.topbar {
+  position:sticky; top:0; z-index:30;
+  background:rgba(8,8,8,.95);
+  backdrop-filter:blur(8px);
+  color:#fff;
+  border-bottom:1px solid rgba(212,175,55,.25);
+}
+.wrap { width:min(1180px, calc(100% - 32px)); margin:0 auto; }
+.nav {
+  display:flex; align-items:center; justify-content:space-between; gap:20px;
+  padding:16px 0;
+}
+.brand {
+  display:flex; flex-direction:column; gap:4px;
+}
+.brand strong { color:var(--gold); font-size:28px; letter-spacing:.4px; }
+.brand span { color:#ddd; font-size:13px; }
+.menu {
+  display:flex; gap:24px; flex-wrap:wrap; justify-content:flex-end;
+}
+.menu a {
+  color:#f4e5a7; font-weight:700; font-size:15px;
+}
+.hero {
+  min-height:78vh;
+  position:relative;
+  display:grid; place-items:center;
+  background:
+    linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.38)),
+    url('images/9DB043FE-6044-4595-83A3-BAE821020439.webp') center/cover no-repeat;
+}
+.hero-inner {
+  text-align:center; color:#fff; padding:80px 0;
+}
+.hero-badge {
+  display:inline-block; padding:10px 16px; border-radius:999px;
+  background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.2);
+  font-weight:700; margin-bottom:18px;
+}
+.hero h1 {
+  margin:0 0 16px;
+  font-size:clamp(34px,5vw,68px); line-height:1.05;
+}
+.hero p {
+  margin:0 auto 28px; width:min(760px, 92%);
+  font-size:clamp(16px,2vw,22px); color:#f6f0dd;
+}
+.cta-row {
+  display:flex; gap:14px; justify-content:center; flex-wrap:wrap;
+}
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:15px 24px; border-radius:999px; font-weight:700;
+  box-shadow:var(--shadow);
+}
+.btn-gold { background:linear-gradient(180deg,#f3df98,var(--gold)); color:#111; }
+.btn-dark { background:#fff; color:#111; }
+section { padding:72px 0; }
+.section-title {
+  text-align:center; margin-bottom:14px;
+  color:#111; font-size:clamp(28px,4vw,42px);
+}
+.section-sub {
+  text-align:center; max-width:760px; margin:0 auto 34px;
+  color:var(--muted); font-size:18px; line-height:1.6;
+}
+.grid-3 {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+}
+.grid-2 {
+  display:grid; grid-template-columns:repeat(2,1fr); gap:22px;
+}
+.card {
+  background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+  overflow:hidden; border:1px solid rgba(212,175,55,.15);
+}
+.card-body { padding:22px; }
+.card h3 { margin:0 0 10px; font-size:24px; }
+.card p { margin:0; color:var(--muted); line-height:1.6; }
+.feature-list {
+  display:grid; grid-template-columns:repeat(2,1fr); gap:14px 22px;
+  margin-top:20px;
+}
+.feature {
+  background:#fff; border-radius:16px; padding:16px 18px; box-shadow:var(--shadow);
+  border:1px solid rgba(212,175,55,.14); font-weight:700;
+}
+.highlight {
+  background:linear-gradient(180deg,#fff,#fbf5e8);
+}
+.stats {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:26px;
+}
+.stat {
+  text-align:center; padding:24px 16px; background:#fff; border-radius:18px;
+  box-shadow:var(--shadow); border:1px solid rgba(212,175,55,.12);
+}
+.stat strong { display:block; font-size:30px; color:var(--gold); margin-bottom:6px; }
+.price-list {
+  display:grid; gap:16px;
+}
+.price-item {
+  display:flex; align-items:center; justify-content:space-between; gap:18px;
+  padding:18px 22px; background:#fff; border-radius:18px; box-shadow:var(--shadow);
+  border-left:5px solid var(--gold);
+}
+.price-item span:last-child { font-weight:800; color:#111; white-space:nowrap; }
+.gallery {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+}
+.gallery-item {
+  border-radius:18px; overflow:hidden; box-shadow:var(--shadow); background:#fff;
+  border:1px solid rgba(212,175,55,.14);
+}
+.gallery-item img {
+  width:100%; height:290px; object-fit:cover; transition:transform .25s ease;
+}
+.gallery-item:hover img { transform:scale(1.04); }
+.two-col {
+  display:grid; grid-template-columns:1.05fr .95fr; gap:28px; align-items:center;
+}
+.contact-box {
+  background:#111; color:#fff; border-radius:24px; padding:28px; box-shadow:var(--shadow);
+}
+.contact-box h3 { color:var(--gold); margin-top:0; font-size:28px; }
+.contact-box p { color:#eee; line-height:1.7; }
+.footer {
+  background:#0c0c0c; color:#eee; padding:28px 0; margin-top:30px;
+  border-top:1px solid rgba(212,175,55,.25);
+}
+.float-actions {
+  position:fixed; right:18px; bottom:18px; display:flex; flex-direction:column; gap:12px; z-index:40;
+}
+.float-actions a {
+  padding:14px 18px; border-radius:999px; font-weight:800; box-shadow:var(--shadow);
+}
+.call { background:linear-gradient(180deg,#f1dc92,var(--gold)); color:#111; }
+.wa { background:#25D366; color:#fff; }
+.note {
+  font-size:13px; color:#8b8b8b; text-align:center; margin-top:12px;
+}
+@media (max-width: 980px) {
+  .grid-3, .gallery, .stats, .grid-2, .two-col { grid-template-columns:1fr 1fr; }
+  .feature-list { grid-template-columns:1fr 1fr; }
+}
+@media (max-width: 680px) {
+  .menu { display:none; }
+  .grid-3, .gallery, .stats, .grid-2, .two-col, .feature-list { grid-template-columns:1fr; }
+  .hero { min-height:72vh; }
+  .hero-inner { padding:64px 0; }
+  .brand strong { font-size:24px; }
+  .price-item { flex-direction:column; align-items:flex-start; }
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap nav">
+    <div class="brand">
+      <strong>Casă Daniel 2</strong>
+      <span>Moieciu de Jos • Brașov</span>
+    </div>
+    <div class="menu">
+      <a href="#despre">Despre</a>
+      <a href="#camere">Camere</a>
+      <a href="#piscina">Piscină</a>
+      <a href="#facilitati">Facilități</a>
+      <a href="#tarife">Tarife</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-badge">Eleganță • Natură • Relaxare</div>
+    <h1>Casă Daniel 2</h1>
+    <p>Pensiune elegantă în Moieciu de Jos, cu camere moderne, piscină interioară, restaurant, foișoare, foc de tabără și spații perfecte pentru relaxare.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="https://wa.me/40751543696" target="_blank">Rezervă pe WhatsApp</a>
+      <a class="btn btn-dark" href="#galerie">Vezi galeria</a>
+    </div>
+  </div>
+</header>
+
+<section id="despre" class="highlight">
+  <div class="wrap">
+    <h2 class="section-title">O locație elegantă pentru vacanțe și evenimente</h2>
+    <p class="section-sub">Inaugurată în 2024, Casă Daniel 2 oferă servicii turistice de calitate în zona Moieciu de Jos. Unitatea are acces ușor de la drumul principal, priveliști frumoase și o atmosferă de hotel, în stil alb și auriu.</p>
+    <div class="stats">
+      <div class="stat"><strong>50</strong><span>locuri cazare</span></div>
+      <div class="stat"><strong>20</strong><span>spații de cazare</span></div>
+      <div class="stat"><strong>60</strong><span>locuri evenimente</span></div>
+      <div class="stat"><strong>2024</strong><span>inaugurată</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="camere">
+  <div class="wrap">
+    <h2 class="section-title">Camere și apartamente</h2>
+    <p class="section-sub">10 camere duble, 4 camere cu pat matrimonial, 2 camere triple și 4 apartamente cu câte 2 camere. Toate sunt decorate elegant și potrivite pentru cupluri, familii sau grupuri.</p>
+    <div class="grid-3">
+      <div class="card">
+        <img src="images/1FEA317A-1238-49EC-93AC-D0DCA37738B1.jpeg" alt="Cameră dublă">
+        <div class="card-body"><h3>Camere duble</h3><p>Confort, lumină naturală, baie proprie, TV, frigider și internet wireless.</p></div>
+      </div>
+      <div class="card">
+        <img src="images/8CBBB2FA-1771-408C-8C9E-8D08BBCF20E1.jpeg" alt="Cameră matrimonială">
+        <div class="card-body"><h3>Camere matrimoniale</h3><p>Design elegant, atmosferă romantică și decor premium în stil hotel.</p></div>
+      </div>
+      <div class="card">
+        <img src="images/A2370703-8600-424E-8553-1968570F88C5.jpeg" alt="Apartament">
+        <div class="card-body"><h3>Apartamente</h3><p>Spațiu generos, ideale pentru familii și sejururi mai lungi.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="piscina" class="highlight">
+  <div class="wrap">
+    <div class="two-col">
+      <div>
+        <h2 class="section-title" style="text-align:left;margin-top:0">Piscină interioară & relaxare</h2>
+        <p class="section-sub" style="text-align:left;margin:0 0 20px 0">Am adăugat separat această rubrică, exact cum ai cerut. Piscina interioară completează zona de relaxare și oferă un plus de confort pentru oaspeți.</p>
+        <div class="feature-list">
+          <div class="feature">Piscină interioară</div>
+          <div class="feature">Ciubăr</div>
+          <div class="feature">Relaxare după drumeții</div>
+          <div class="feature">Atmosferă intimă</div>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="gallery-item"><img src="images/C73B5381-5C85-4543-BA99-F1B7D9EE2053.jpeg" alt="Piscină interioară"></div>
+        <div class="gallery-item"><img src="images/C57277BE-10FD-4EDE-AEBA-852C617FF943.jpeg" alt="Piscină seara"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="facilitati">
+  <div class="wrap">
+    <h2 class="section-title">Facilități complete</h2>
+    <p class="section-sub">Restaurant, bar, sală de conferințe, sală de jocuri, curte mare, foișor, grătar, foc de tabără, parcare și internet wireless gratuit.</p>
+    <div class="feature-list">
+      <div class="feature">Restaurant & bar</div>
+      <div class="feature">Mic dejun la cerere</div>
+      <div class="feature">Demipensiune / pensiune completă</div>
+      <div class="feature">Sală de conferințe</div>
+      <div class="feature">Foișor & grătar</div>
+      <div class="feature">Foc de tabără</div>
+      <div class="feature">Loc de joacă</div>
+      <div class="feature">Parcare privată</div>
+      <div class="feature">Wi‑Fi gratuit</div>
+      <div class="feature">Biliard & tenis de masă</div>
+      <div class="feature">Transport la cerere</div>
+      <div class="feature">Acceptăm card și tichete</div>
+    </div>
+  </div>
+</section>
+
+<section id="tarife" class="highlight">
+  <div class="wrap">
+    <h2 class="section-title">Tarife cazare</h2>
+    <p class="section-sub">Tarife orientative pentru o singură noapte rezervată.</p>
+    <div class="price-list">
+      <div class="price-item"><span>Cameră dublă fără balcon – 2 locuri</span><span>250 Lei</span></div>
+      <div class="price-item"><span>Cameră dublă cu balcon – 2 locuri</span><span>280 Lei</span></div>
+      <div class="price-item"><span>Cameră triplă fără balcon – 3 locuri</span><span>300 Lei</span></div>
+      <div class="price-item"><span>Cameră triplă cu balcon – 3 locuri</span><span>300 Lei</span></div>
+      <div class="price-item"><span>Apartament 2 camere – 4 locuri</span><span>400 Lei</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="galerie">
+  <div class="wrap">
+    <h2 class="section-title">Galerie foto</h2>
+    <p class="section-sub">Poze reale trimise de tine: camere, restaurant, piscină interioară, curte, foc de tabără și zone de relaxare.</p>
+
+    <h3 style="margin:0 0 18px;color:#111">Curte & exterior</h3>
+    <div class="gallery"><a class="gallery-item" href="images/81C66EFB-8359-4F40-BEF5-223426473194.webp" target="_blank"><img src="images/81C66EFB-8359-4F40-BEF5-223426473194.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/994D4DAF-39F8-407F-9F7A-72ACD3D801A5.webp" target="_blank"><img src="images/994D4DAF-39F8-407F-9F7A-72ACD3D801A5.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/31E94193-B7FD-480A-BC6D-F4D9558E6726.webp" target="_blank"><img src="images/31E94193-B7FD-480A-BC6D-F4D9558E6726.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/F31B608F-3995-4725-827E-A9019EC5A7ED.webp" target="_blank"><img src="images/F31B608F-3995-4725-827E-A9019EC5A7ED.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/5F903384-B888-4778-A484-39A8242CAC61.webp" target="_blank"><img src="images/5F903384-B888-4778-A484-39A8242CAC61.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/0E341ED5-BE8C-4B24-9389-E09851DAD9DF.webp" target="_blank"><img src="images/0E341ED5-BE8C-4B24-9389-E09851DAD9DF.webp" loading="lazy"></a></div>
+
+    <h3 style="margin:34px 0 18px;color:#111">Camere</h3>
+    <div class="gallery"><a class="gallery-item" href="images/1FEA317A-1238-49EC-93AC-D0DCA37738B1.jpeg" target="_blank"><img src="images/1FEA317A-1238-49EC-93AC-D0DCA37738B1.jpeg" loading="lazy"></a>
+<a class="gallery-item" href="images/FE9B2F43-6923-45D1-B29E-09D6E796B193.jpeg" target="_blank"><img src="images/FE9B2F43-6923-45D1-B29E-09D6E796B193.jpeg" loading="lazy"></a>
+<a class="gallery-item" href="images/743904E1-2518-469A-B92E-90D392C18947.jpeg" target="_blank"><img src="images/743904E1-2518-469A-B92E-90D392C18947.jpeg" loading="lazy"></a>
+<a class="gallery-item" href="images/8CBBB2FA-1771-408C-8C9E-8D08BBCF20E1.jpeg" target="_blank"><img src="images/8CBBB2FA-1771-408C-8C9E-8D08BBCF20E1.jpeg" loading="lazy"></a>
+<a class="gallery-item" href="images/C86B66AF-852E-4681-B532-BD84BAF68A96.jpeg" target="_blank"><img src="images/C86B66AF-852E-4681-B532-BD84BAF68A96.jpeg" loading="lazy"></a>
+<a class="gallery-item" href="images/7722BF99-A4F4-4DA0-896A-784832B9046A.jpeg" target="_blank"><img src="images/7722BF99-A4F4-4DA0-896A-784832B9046A.jpeg" loading="lazy"></a>
+<a class="gallery-item" href="images/F1A17D3E-6EF2-429C-B4AC-118DAB4B4DE2.jpeg" target="_blank"><img src="images/F1A17D3E-6EF2-429C-B4AC-118DAB4B4DE2.jpeg" loading="lazy"></a>
+<a class="gallery-item" href="images/A2370703-8600-424E-8553-1968570F88C5.jpeg" target="_blank"><img src="images/A2370703-8600-424E-8553-1968570F88C5.jpeg" loading="lazy"></a>
+<a class="gallery-item" href="images/AA0FB791-F57C-48D5-A19E-1664083475BE.jpeg" target="_blank"><img src="images/AA0FB791-F57C-48D5-A19E-1664083475BE.jpeg" loading="lazy"></a></div>
+
+    <h3 style="margin:34px 0 18px;color:#111">Restaurant & sală</h3>
+    <div class="gallery"><a class="gallery-item" href="images/2AC3674A-67A0-4B30-8DBB-BF2ADD62B4CB.webp" target="_blank"><img src="images/2AC3674A-67A0-4B30-8DBB-BF2ADD62B4CB.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/0701956E-F108-4190-B3AC-8BF7F6DE2DA1.webp" target="_blank"><img src="images/0701956E-F108-4190-B3AC-8BF7F6DE2DA1.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/48332F43-8650-4B4A-83C1-7684B7F60E58.webp" target="_blank"><img src="images/48332F43-8650-4B4A-83C1-7684B7F60E58.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/E3A35A30-B230-4251-ADCD-E4C40A4586A8.webp" target="_blank"><img src="images/E3A35A30-B230-4251-ADCD-E4C40A4586A8.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/532493C3-451C-4177-9EC0-8CE83FFF80F6.webp" target="_blank"><img src="images/532493C3-451C-4177-9EC0-8CE83FFF80F6.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/B8E8D342-472C-43BC-8815-07BCDADE5141.webp" target="_blank"><img src="images/B8E8D342-472C-43BC-8815-07BCDADE5141.webp" loading="lazy"></a></div>
+
+    <h3 style="margin:34px 0 18px;color:#111">Piscină interioară</h3>
+    <div class="gallery"><a class="gallery-item" href="images/C73B5381-5C85-4543-BA99-F1B7D9EE2053.jpeg" target="_blank"><img src="images/C73B5381-5C85-4543-BA99-F1B7D9EE2053.jpeg" loading="lazy"></a>
+<a class="gallery-item" href="images/C57277BE-10FD-4EDE-AEBA-852C617FF943.jpeg" target="_blank"><img src="images/C57277BE-10FD-4EDE-AEBA-852C617FF943.jpeg" loading="lazy"></a></div>
+
+    <h3 style="margin:34px 0 18px;color:#111">Baie & detalii</h3>
+    <div class="gallery"><a class="gallery-item" href="images/FC407C3E-E584-4C6E-A7BB-08312DC87380.webp" target="_blank"><img src="images/FC407C3E-E584-4C6E-A7BB-08312DC87380.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/45008506-50C9-4203-9C86-3038CEA3706F.webp" target="_blank"><img src="images/45008506-50C9-4203-9C86-3038CEA3706F.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/7B0D93B9-986C-45A5-B214-944E863FEF63.webp" target="_blank"><img src="images/7B0D93B9-986C-45A5-B214-944E863FEF63.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/946FC6D5-2FD3-4F8C-ACDB-F531427B11D2.webp" target="_blank"><img src="images/946FC6D5-2FD3-4F8C-ACDB-F531427B11D2.webp" loading="lazy"></a></div>
+
+    <h3 style="margin:34px 0 18px;color:#111">Jocuri & conferințe</h3>
+    <div class="gallery"><a class="gallery-item" href="images/0D0B4893-C024-4FE3-AACE-B0EF0647DAD6.webp" target="_blank"><img src="images/0D0B4893-C024-4FE3-AACE-B0EF0647DAD6.webp" loading="lazy"></a>
+<a class="gallery-item" href="images/3B8A7839-7AB8-4C0A-B9CA-937EE4CDEB8E.jpeg" target="_blank"><img src="images/3B8A7839-7AB8-4C0A-B9CA-937EE4CDEB8E.jpeg" loading="lazy"></a></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap two-col">
+    <div class="contact-box">
+      <h3>Contact & rezervări</h3>
+      <p><strong>Telefon:</strong> 0751 543 696<br>
+      <strong>Adresă:</strong> Brașov, Moieciu de Jos, nr. 508<br>
+      <strong>Rezervări:</strong> prin telefon sau mesaj / WhatsApp</p>
+      <p>Acceptăm plata cu card, numerar și tichete / vouchere de vacanță.</p>
+      <div class="cta-row" style="justify-content:flex-start">
+        <a class="btn btn-gold" href="tel:0751543696">Sună acum</a>
+        <a class="btn btn-dark" href="https://wa.me/40751543696" target="_blank">Scrie pe WhatsApp</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/6E3C4C96-D4D9-4904-873D-B92E81A0DB33.webp" alt="Casă Daniel 2 exterior">
+      <div class="card-body">
+        <h3>Casă Daniel 2</h3>
+        <p>Locație potrivită pentru vacanțe la munte, evenimente private, team building, tabere și relaxare în natură.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <div class="wrap">
+    <strong style="color:var(--gold)">Casă Daniel 2</strong> • Moieciu de Jos, Brașov • 0751 543 696
+    <div class="note">Site pregătit pentru publicare pe GitHub Pages sau orice hosting obișnuit.</div>
+  </div>
+</div>
+
+<div class="float-actions">
+  <a class="call" href="tel:0751543696">Sună</a>
+  <a class="wa" href="https://wa.me/40751543696" target="_blank">WhatsApp</a>
+</div>
+</body>
+</html>
